@@ -1,13 +1,54 @@
-@startuml lol
-scale 2
-left to right direction
-skinparam packageStyle rect
-actor customer
-actor clerk
-rectangle checkout {
-customer -- (checkout)
-(checkout).> (payment): include 
-(help).> (checkout): extend 
-(checkout) -- clerk
+@startuml
+
+' Настройка стиля для прямоугольника
+skinparam class {
+    BackgroundColor #FFF
+    BorderColor #000
+    ArrowColor #000
+    FontName Arial
 }
-@end um1dd
+
+' Класс с атрибутами и методами
+class "толя" as MyClass {
+  ' Атрибуты (поля класса)
+  - attribute1: string
+  - attribute2: int
+  - attribute3: bool
+
+  ' Методы (функции класса)
+  + method1(param: string): void
+  + method2(): int
+  + method3(param1: int, param2: bool): string
+}
+
+' Можно добавить связь с другим классом (опционально)
+' class AnotherClass
+' MyClass --> AnotherClass : "использует"
+MyClass--MyClasss
+
+' Настройка стиля для прямоугольника
+skinparam class {
+    BackgroundColor #FFF
+    BorderColor #000
+    ArrowColor #000
+    FontName Arial
+}
+
+' Класс с атрибутами и методами
+class "Вася" as MyClasss {
+  ' Атрибуты (поля класса)
+  - attribute1: string
+  - attribute2: int
+  - attribute3: bool
+
+  ' Методы (функции класса)
+  + method1(param: string): void
+  + method2(): int
+  + method3(param1: int, param2: bool): string
+}
+
+' Можно добавить связь с другим классом (опционально)
+' class AnotherClass
+' MyClass --> AnotherClass : "использует"
+
+@enduml
